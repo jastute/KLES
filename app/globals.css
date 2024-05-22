@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+.sub-active{
+  @apply font-poppins text-primary font-bold border-b-2 border-secondary
+}
+
+.collaborators a{
+  @apply font-poppins text-primary my-2 hover:underline
+}
+
+.divider {
+  width: 7px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the height to match the logos' height */
+  background: linear-gradient(to bottom, #009639, #FFFFFF, #DA121A);
+}
+body{
+ /* @apply bg-[#111827] */
+}

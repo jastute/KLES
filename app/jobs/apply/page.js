@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import toast, { Toaster } from "react-hot-toast";
 import { FaLocationDot } from "react-icons/fa6";
 import vacancies from "@/lib/jobs.json"
-import { useSearchParams } from "next/navigation";
+// import { useSearchParams } from "next/navigation";
 
 const Apply = () => {
   const router = useRouter();
@@ -19,8 +19,8 @@ const Apply = () => {
     abstractFile: null,
   });
 
- const searchParams=useSearchParams()
- const jobId=searchParams.get('id').split("-")[0]
+//  const searchParams=useSearchParams()
+//  const jobId=searchParams.get('id').split("-")[0]
 
   
   // const jobToRender = vacancies.flatMap(vacancy =>
@@ -29,15 +29,15 @@ const Apply = () => {
   //   )
   // );
 
-  const jobToRender = vacancies.flatMap(vacancy =>
-    Object.entries(vacancy.country).flatMap(([country, companies]) =>
-      Object.entries(companies).filter(([, job]) => job.jobId === jobId)
-        .map(([company, jobDetails]) => ({
-          country,
-          company,
-          title: vacancy.title,
-          ...jobDetails
-        }))));
+  // const jobToRender = vacancies.flatMap(vacancy =>
+  //   Object.entries(vacancy.country).flatMap(([country, companies]) =>
+  //     Object.entries(companies).filter(([, job]) => job.jobId === jobId)
+  //       .map(([company, jobDetails]) => ({
+  //         country,
+  //         company,
+  //         title: vacancy.title,
+  //         ...jobDetails
+  //       }))));
   // console.log(jobToRender);
 
   const handleChange = (e) => {
@@ -109,7 +109,7 @@ const Apply = () => {
 
           <div className="border p-5 border-gray-400 rounded-lg my-5">
             <h1 className=" sm:lg sm:text-xl font-bold">Job description</h1>
-              <div>
+              {/* <div>
                   {jobToRender.length > 0 ? (
                       jobToRender.map((job, index) => (
                         <div key={index}>
@@ -125,7 +125,7 @@ const Apply = () => {
                     ) : (
                       <p>No job found with the given jobId.</p>
                     )}
-              </div>
+              </div> */}
 
               
                </div>

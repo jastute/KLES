@@ -1,6 +1,6 @@
 'use client'
 import Navbar from "./nav"
-import Footer from "./fx";
+import Footer from "./footer";
 import { usePathname } from "next/navigation";
 // import Footer from "@/components/footer";
 import Nav from "@/components/adminComponents/adminNav";
